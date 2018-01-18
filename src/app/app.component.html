@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+
+<div class="container">
+
+  <button class="btn btn-primary" (click)="isOdd = !isOdd">Toggle Odd/Even</button>
+
+  <hr>
+
+  <div *ngIf="isOdd" class="list-group">
+    <div *ngFor="let nbr of oddNbrs">
+      <div class="list-group-item"
+           [ngClass]="{odd: nbr % 2 !== 0}"
+           [ngStyle]="{backgroundColor: nbr % 2 !== 0 ? 'yellow' : 'transparent' }">
+      {{nbr}}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isOdd" class="list-group">
+    <div *ngFor="let nbr of evenNbrs">
+      <div class="list-group-item"
+          [ngClass]="{odd: nbr % 2 !== 0}"
+          [ngStyle]="{backgroundColor: nbr % 2 !== 0 ? 'yellow' : 'transparent'}">
+      {{nbr}}
+      </div>
+    </div>
+  </div>
+
+</div>
