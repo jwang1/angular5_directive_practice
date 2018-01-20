@@ -26,6 +26,7 @@ export class BetterHighlightDirective implements OnInit {
     this.renderRef.setStyle(this.elemRef.nativeElement, 'background-color', 'transparent');
 
     this.fontColor = this.defaultColor;
+
   }
 
 }

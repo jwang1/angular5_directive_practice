@@ -34,6 +34,21 @@
 
   <hr>
 
+  <div *ngIf="!isOdd" class="panel panel-primary">test Angular Structure-Directive *ngIf and *ngFor are transpiled to &lt;ng-template&gt;</div>
+
+  <hr>
+
+  <ng-template [ngIf]="!isOdd" class="list-group">
+    <ng-template ngFor let-nbr [ngForOf]="evenNbrs">
+      <div class="list-group-item"
+           [ngClass]="{odd: nbr % 2 !== 0}"
+           [ngStyle]="{backgroundColor: nbr % 2 !== 0 ? 'yellow' : 'lightblue'}">
+      {{ nbr }}</div>
+    </ng-template>
+  </ng-template>
+
+  <hr>
+
   <div appBasicHighlight>Testing basic highlight directive.</div>
 
   <hr>
