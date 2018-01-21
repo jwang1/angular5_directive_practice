@@ -59,4 +59,21 @@
 
   <hr>
 
+  <!-- using ng-template, where * is not needed -->
+  <ng-template [appUnless]="isOdd">
+    <div class="h3 blockquote">check own structure-directive UnlessDirective</div>
+  </ng-template>
+
+  <hr>
+
+
+  <!-- using on element, requires * -->
+  <div *appUnless="!isOdd" class="panel-heading" [ngStyle]="{color: red}">
+    Using in-house *appUnless structure-Directive
+  </div>
+
+  <hr>
+
+  <p class="has-success h3 blockquote-reverse">Set some footer info to raise up the last useful information above.</p>
+
 </div>
